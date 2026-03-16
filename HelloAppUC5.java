@@ -1,0 +1,24 @@
+public class HelloAppUC5 {
+
+    public static void main(String[] args) {
+        
+        if (args.length == 0) {
+            
+            System.out.println("Hello, World!");
+        } else {
+            
+            StringBuilder nameList = new StringBuilder();
+
+            
+            for (String name : args) {
+                if (nameList.length() > 0) {
+                    nameList.append(", "); 
+                }
+                nameList.append(name);
+            }
+
+            
+            System.out.println("Hello, " + nameList.toString() + "!");
+        }
+    }
+}
